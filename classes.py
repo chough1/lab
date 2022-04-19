@@ -32,7 +32,7 @@ class Television:
         Method to adjust the TV channel by incrementing its value.
         :return: None.
         """
-        if self.__status and self.__channel<Television.MAX_CHANNEL:
+        if self.__status and self.__channel < Television.MAX_CHANNEL:
             self.__channel += 1
         if self.__channel == Television.MAX_CHANNEL:
             self.__channel = Television.MIN_CHANNEL
@@ -42,7 +42,7 @@ class Television:
          Method to adjust the TV channel by decrementing its value.
         :return: None.
         """
-        if self.__status and self.__channel<Television.MIN_CHANNEL:
+        if self.__status and self.__channel > Television.MIN_CHANNEL:
             self.__channel -= 1
         if self.__channel == Television.MIN_CHANNEL:
             self.__channel = Television.MAX_CHANNEL

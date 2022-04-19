@@ -20,7 +20,7 @@ class Television:
         self.__volume = volume
         self.__status = status
 
-    def status(self) -> None:
+    def power(self) -> None:
         """
         Method to turn the TV on/off.
         :return: None.
@@ -32,7 +32,7 @@ class Television:
         Method to adjust the TV channel by incrementing its value.
         :return: None.
         """
-        if self.__status and self.__channel<Television.MAX_CHANNEL:
+        if self.__status and self.__channel < Television.MAX_CHANNEL:
             self.__channel += 1
         if self.__channel == Television.MAX_CHANNEL:
             self.__channel = Television.MIN_CHANNEL
@@ -42,9 +42,9 @@ class Television:
          Method to adjust the TV channel by decrementing its value.
         :return: None.
         """
-        if self.__status and self.__channel<Television.MIN_CHANNEL:
+        if self.__status and self.__channel > Television.MIN_CHANNEL:
             self.__channel -= 1
-        if self.__channel == Television.MIN_CHANNEL:
+        if self.__status and self.__channel == Television.MIN_CHANNEL:
             self.__channel = Television.MAX_CHANNEL
 
     def volume_up(self) -> None:
